@@ -1,12 +1,14 @@
 package com.example.rankingssongs
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.rankingssongs.data.TopTrack
 import com.example.rankingssongs.databinding.SongItemBinding
 
-class MainAdapter( val data: ArrayList<SongData>) : RecyclerView.Adapter<MainAdapter.MainViewHolder>(){
+class MainAdapter( val data: ArrayList<TopTrack>) : RecyclerView.Adapter<MainAdapter.MainViewHolder>(){
     class MainViewHolder(val binding: SongItemBinding) : ViewHolder(binding.root) {
     }
 
@@ -14,8 +16,8 @@ class MainAdapter( val data: ArrayList<SongData>) : RecyclerView.Adapter<MainAda
         val inflater = LayoutInflater.from(parent.context).inflate(R.layout.song_item, parent, false)
         return MainViewHolder(SongItemBinding.bind(inflater))
     }
-
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
+        Log.d("s", position.toString())
         holder.binding.data = data[position]
     }
 
