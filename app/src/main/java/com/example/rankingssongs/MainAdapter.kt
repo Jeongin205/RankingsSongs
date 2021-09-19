@@ -5,10 +5,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.rankingssongs.data.TopTrack
 import com.example.rankingssongs.databinding.SongItemBinding
 
-class MainAdapter( val data: ArrayList<TopTrack>) : RecyclerView.Adapter<MainAdapter.MainViewHolder>(){
+class MainAdapter(val data: ArrayList<SongData>) : RecyclerView.Adapter<MainAdapter.MainViewHolder>(){
     class MainViewHolder(val binding: SongItemBinding) : ViewHolder(binding.root) {
     }
 
